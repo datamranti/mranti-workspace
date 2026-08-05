@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MRANTI AI Brain Workspace" />
+    <title>MRANTI AI Brain Workspace</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar surface">
+        <div class="brand-lockup">
+          <div class="brand-wordmark" aria-label="MRANTI">MRANTI<span class="brand-dot">.</span></div>
+          <div class="brand-divider" aria-hidden="true"></div>
+          <div>
+            <p class="eyebrow">AI BRAIN WORKSPACE</p>
+            <p class="brand-subtitle">Search enterprise knowledge across Gmail, Drive, Docs, Sheets and Calendar</p>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <button class="team-switcher" type="button" aria-label="Current workspace">
+            <span class="avatar">D</span>
+            <span><strong>Data Strategy Team</strong><small>Admin</small></span>
+            <span class="chevron">⌄</span>
+          </button>
+          <button class="primary-button" id="new-query-button" type="button"><span>＋</span> New Query</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="search-stage surface" aria-labelledby="workspace-title">
+          <h1 class="sr-only" id="workspace-title">MRANTI AI Brain enterprise search</h1>
+          <form id="search-form" class="search-form">
+            <span class="brain-mark" aria-hidden="true">✦</span>
+            <input
+              id="search-input"
+              name="query"
+              type="search"
+              autocomplete="off"
+              value="Find all documents related to MIDA"
+              placeholder="Ask AI Brain about MRANTI knowledge…"
+              aria-label="Search MRANTI enterprise knowledge"
+            />
+            <button id="clear-query" class="clear-button" type="button" aria-label="Clear query">×</button>
+            <button id="search-button" class="search-button" type="submit" aria-label="Run search">→</button>
+          </form>
+
+          <div class="source-filter" aria-label="Search sources">
+            <span class="source-filter-label">Search across</span>
+            <button class="source-chip active" data-source="drive" type="button"><span class="source-icon drive">△</span> Drive</button>
+            <button class="source-chip staged" data-source="gmail" type="button"><span class="source-icon gmail">M</span> Gmail <small>Next</small></button>
+            <button class="source-chip active" data-source="docs" type="button"><span class="source-icon docs">▤</span> Docs</button>
+            <button class="source-chip staged" data-source="sheets" type="button"><span class="source-icon sheets">▦</span> Sheets <small>Next</small></button>
+            <button class="source-chip staged" data-source="calendar" type="button"><span class="source-icon calendar">31</span> Calendar <small>Next</small></button>
+          </div>
+
+          <div class="workspace-grid">
+            <aside class="results-panel panel" aria-label="AI Brain search results">
+              <div class="panel-heading">
+                <div class="heading-icon">✦</div>
+                <div>
+                  <p class="eyebrow">AI BRAIN RESPONSE</p>
+                  <p id="response-message" class="response-message">I found 42 relevant items related to MIDA across your Google Workspace.</p>
+                </div>
+              </div>
+
+              <div class="metric-grid" id="metric-grid">
+                <article class="metric-card"><span>Total Results</span><strong id="metric-total">42</strong><small>items</small></article>
+                <article class="metric-card"><span>Drive Files</span><strong id="metric-drive">28</strong><small>files</small></article>
+                <article class="metric-card"><span>Gmail Threads</span><strong id="metric-gmail">8</strong><small>threads</small></article>
+                <article class="metric-card"><span>Docs / Sheets</span><strong id="metric-docs">6</strong><small>files</small></article>
+                <article class="metric-card"><span>Meetings</span><strong id="metric-meetings">4</strong><small>events</small></article>
+              </div>
+
+              <div class="results-toolbar">
+                <strong>Top relevant results</strong>
+                <select id="sort-results" aria-label="Sort results">
+                  <option value="relevance">Most relevant</option>
+                  <option value="recent">Most recent</option>
+                  <option value="name">Name</option>
+                </select>
+              </div>
+
+              <div id="results-list" class="results-list" aria-live="polite"></div>
+
+              <form id="follow-up-form" class="follow-up-form">
+                <input id="follow-up-input" type="text" placeholder="Ask a follow-up question…" aria-label="Ask a follow-up question" />
+                <button type="submit" aria-label="Submit follow-up">→</button>
+              </form>
+              <p class="prompt-hints">Try: “Show only documents” · “What did we discuss in meetings?” · “Summarise key points”</p>
+            </aside>
+
+            <section class="detail-panel panel" aria-live="polite">
+              <div id="detail-loading" class="detail-loading hidden">
+                <span class="spinner"></span>
+                <p>AI Brain is reading the selected source…</p>
+              </div>
+
+              <div id="detail-content">
+                <header class="document-header">
+                  <div class="document-title-wrap">
+                    <span id="document-type-icon" class="document-type-icon docs">▤</span>
+                    <div>
+                      <h2 id="document-title">MIDA Collaboration Opportunity – MRANTI Overview</h2>
+                      <p id="document-breadcrumb">Google Docs &nbsp;•&nbsp; /Strategic Partnerships/MIDA &nbsp;•&nbsp; Owner: Aina’ A Rahman</p>
+                    </div>
+                  </div>
+                  <button id="open-source-top" class="outline-button" type="button"><span class="source-icon drive">△</span> Open in Drive</button>
+                </header>
+
+                <nav class="tab-list" aria-label="Document details">
+                  <button class="tab active" data-tab="overview" type="button">Overview</button>
+                  <button class="tab" data-tab="preview" type="button">Content Preview</button>
+                  <button class="tab" data-tab="activity" type="button">Activity</button>
+                  <button class="tab" data-tab="permissions" type="button">Permissions</button>
+                </nav>
+
+                <div id="tab-overview" class="tab-panel active">
+                  <div class="insight-grid">
+                    <article class="insight-card summary-card">
+                      <p class="section-label">AI SUMMARY</p>
+                      <p id="document-summary">This document outlines potential collaboration opportunities between MRANTI and MIDA, focusing on innovation ecosystem development, startup support programmes, and joint initiatives for industry adoption.</p>
+                      <button id="summarise-action" class="text-button" type="button">Summarise</button>
+                    </article>
+
+                    <article class="insight-card">
+                      <p class="section-label">KEY DETAILS</p>
+                      <dl class="key-details">
+                        <div><dt>Source</dt><dd id="detail-source">Google Docs</dd></div>
+                        <div><dt>Owner</dt><dd id="detail-owner">Aina’ A Rahman</dd></div>
+                        <div><dt>Last modified</dt><dd id="detail-modified">10:12 AM</dd></div>
+                        <div><dt>File type</dt><dd id="detail-file-type">Google Docs</dd></div>
+                      </dl>
+                    </article>
+
+                    <article class="insight-card map-card">
+                      <p class="section-label">KNOWLEDGE MAP</p>
+                      <div id="knowledge-map" class="knowledge-map"></div>
+                    </article>
+                  </div>
+
+                  <div class="related-grid">
+                    <article class="related-card"><div class="related-heading"><span>RELATED EMAILS</span><button type="button" data-staged-action="emails">View all</button></div><div id="related-emails" class="related-list"></div></article>
+                    <article class="related-card"><div class="related-heading"><span>RELATED MEETINGS</span><button type="button" data-staged-action="meetings">View all</button></div><div id="related-meetings" class="related-list"></div></article>
+                    <article class="related-card"><div class="related-heading"><span>RELATED SHEETS</span><button type="button" data-staged-action="sheets">View all</button></div><div id="related-sheets" class="related-list"></div></article>
+                  </div>
+                </div>
+
+                <div id="tab-preview" class="tab-panel">
+                  <article class="content-card"><p class="section-label">CONTENT PREVIEW</p><div id="content-preview" class="content-preview">Select a live Drive or Google Docs result to generate a grounded preview.</div></article>
+                </div>
+                <div id="tab-activity" class="tab-panel">
+                  <article class="content-card"><p class="section-label">ACTIVITY</p><div id="activity-timeline" class="activity-timeline"></div></article>
+                </div>
+                <div id="tab-permissions" class="tab-panel">
+                  <article class="content-card"><p class="section-label">PERMISSIONS</p><p id="permissions-copy">AI Brain respects the access controls of the connected Google credential. Users only receive sources available to that authorised account.</p></article>
+                </div>
+
+                <div class="suggested-actions">
+                  <p class="section-label">SUGGESTED ACTIONS</p>
+                  <div class="action-row">
+                    <button type="button" data-action="summarise">✦ <span>Summarise</span></button>
+                    <button type="button" data-staged-action="email">✉ <span>Draft follow-up email</span></button>
+                    <button type="button" data-staged-action="brief">▣ <span>Prepare meeting brief</span></button>
+                    <button type="button" data-action="key-points">☷ <span>Extract key points</span></button>
+                    <button type="button" data-action="open">△ <span>Open source file</span></button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="status-grid" aria-label="Workspace system status">
+          <article class="status-card surface">
+            <div class="status-card-heading"><p>CONNECTED SOURCES</p><button type="button" data-staged-action="sources">Manage sources ›</button></div>
+            <div class="connected-sources">
+              <div><span class="source-icon drive">△</span><strong id="status-drive-count">Live</strong><small>Drive</small></div>
+              <div><span class="source-icon gmail">M</span><strong>Next</strong><small>Gmail</small></div>
+              <div><span class="source-icon docs">▤</span><strong>Live</strong><small>Docs</small></div>
+              <div><span class="source-icon sheets">▦</span><strong>Next</strong><small>Sheets</small></div>
+              <div><span class="source-icon calendar">31</span><strong>Next</strong><small>Calendar</small></div>
+            </div>
+          </article>
+
+          <article class="status-card surface">
+            <div class="status-card-heading"><p>KNOWLEDGE INDEX</p></div>
+            <div class="status-pair"><div><small>Total indexed items</small><strong id="indexed-items">Live search</strong><span>Permission-aware</span></div><div><small>Last check</small><strong id="last-sync">Just now</strong><span class="healthy-text">● Connected</span></div></div>
+          </article>
+
+          <article class="status-card surface">
+            <div class="status-card-heading"><p>AI BRAIN STATUS</p><button id="refresh-health" type="button">Refresh ›</button></div>
+            <div class="status-pair"><div><small>System status</small><strong id="system-status" class="healthy-text">Healthy</strong><span>Drive/Docs MVP</span></div><div><small>Model</small><strong class="model-pill">Gemini 2.5 Flash</strong><span id="mode-label">Demo mode</span></div></div>
+          </article>
+
+          <article class="status-card surface">
+            <div class="status-card-heading"><p>PRIVACY &amp; SECURITY</p></div>
+            <div class="status-pair"><div><small>Data residency</small><strong>Malaysia</strong><span>Deployment requirement</span></div><div><small>Access control</small><strong>Google OAuth</strong><span>Enterprise SSO next</span></div></div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="config.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
