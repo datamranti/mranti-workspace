@@ -1,6 +1,5 @@
 window.MRANTI_AI_BRAIN_CONFIG = {
-  // Example: "https://n8n.example.com/webhook"
-  apiBaseUrl: "",
+  apiBaseUrl: "https://mrantidata.app.n8n.cloud/webhook",
 
   endpoints: {
     search: "mranti-ai-brain-search",
@@ -8,8 +7,7 @@ window.MRANTI_AI_BRAIN_CONFIG = {
     health: "mranti-ai-brain-health"
   },
 
-  // Change to false after configuring the live n8n URL.
-  demoMode: true,
+  demoMode: false,
 
   requestTimeoutMs: 90000
 };
