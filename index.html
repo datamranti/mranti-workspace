@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRANTI Workspace — BrainT</title>
+  <meta name="theme-color" content="#275df5" />
+  <meta name="description" content="MRANTI Workspace — secure conversational organisational intelligence." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="MRANTI Workspace" />
+  <link rel="manifest" href="site.webmanifest?v=11" />
+  <link rel="icon" href="favicon-48x48.png?v=6" sizes="48x48" type="image/png" />
+  <link rel="icon" href="favicon-32x32.png?v=6" sizes="32x32" type="image/png" />
+  <link rel="icon" href="favicon-16x16.png?v=6" sizes="16x16" type="image/png" />
+  <link rel="shortcut icon" href="favicon.ico?v=6" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=6" sizes="180x180" />
+  <meta name="msapplication-TileColor" content="#eef5ff" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20" />
+</head>
+<body class="auth-pending">
+  <!-- Approved login page retained unchanged -->
+  <div id="login-screen" class="login-screen" aria-label="MRANTI Workspace sign in">
+    <main class="login-shell">
+      <section class="login-story-panel">
+        <div class="login-brand-row">
+          <div class="login-brand-lockup" aria-label="MRANTI Workspace">
+            <img class="login-logo" src="https://cdn.prod.website-files.com/6719e3902a71ea8154ba371d/6996a2c470a01e3f32ffa080_M30.png" alt="MRANTI 30 Years" />
+            <span class="login-brand-divider" aria-hidden="true"></span>
+            <img class="login-product-mark" src="mranti-workspace-mark.png" alt="" aria-hidden="true" />
+            <div class="login-brand-copy">
+              <div class="login-brand-name"><span>MRANTI</span> <span>WORKSPACE</span></div>
+              <div class="login-brand-subname">AI BRAIN</div>
+            </div>
+          </div>
+        </div>
+        <div class="login-hero-copy">
+          <p class="login-eyebrow">Enterprise knowledge intelligence</p>
+          <h1 class="login-hero-title">
+            <span class="title-line">Your work.</span>
+            <span class="title-accent">One intelligent brain.</span>
+          </h1>
+          <p class="login-hero-subtitle">Search, connect and understand knowledge across Gmail, Drive, Docs, Sheets and Calendar—all through one secure MRANTI workspace.</p>
+        </div>
+      </section>
+      <section class="login-access-panel">
+        <div class="login-card">
+          <div class="login-card-inner">
+            <h2>Welcome back</h2>
+            <p class="login-card-intro">Sign in with your MRANTI Google Workspace account to access MRANTI Workspace.</p>
+            <div id="login-error" class="login-error" role="alert" aria-live="polite"></div>
+            <button id="sign-in-button" class="google-button" type="button">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path fill="#4285F4" d="M21.6 12.23c0-.71-.06-1.39-.18-2.05H12v3.88h5.38a4.6 4.6 0 0 1-2 3.02v2.52h3.24c1.9-1.75 2.98-4.33 2.98-7.37Z"/><path fill="#34A853" d="M12 22c2.7 0 4.97-.9 6.62-2.4l-3.24-2.52c-.9.6-2.05.96-3.38.96-2.61 0-4.82-1.76-5.61-4.13H3.04v2.6A10 10 0 0 0 12 22Z"/><path fill="#FBBC05" d="M6.39 13.91A6 6 0 0 1 6.08 12c0-.66.11-1.3.31-1.91v-2.6H3.04A10 10 0 0 0 2 12c0 1.62.39 3.15 1.04 4.51l3.35-2.6Z"/><path fill="#EA4335" d="M12 5.96c1.47 0 2.79.5 3.83 1.5l2.87-2.87A9.63 9.63 0 0 0 12 2a10 10 0 0 0-8.96 5.49l3.35 2.6C7.18 7.72 9.39 5.96 12 5.96Z"/></svg>
+              <span>Continue with Google</span>
+            </button>
+            <div class="login-card-divider" aria-hidden="true"></div>
+            <div class="login-trust-list">
+              <div class="login-trust-item">
+                <span class="login-trust-icon trust-shield"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3 5 6v5.2c0 4.4 2.8 7.6 7 9.3 4.2-1.7 7-4.9 7-9.3V6l-7-3Z"/></svg></span>
+                <span>Authorised <strong>@mranti.my</strong> accounts only.</span>
+              </div>
+              <div class="login-trust-item">
+                <span class="login-trust-icon trust-lock"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+                <span>Access follows your organisation account and approved Workspace permissions.</span>
+              </div>
+              <div class="login-trust-item">
+                <span class="login-trust-icon trust-data"><svg aria-hidden="true" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v7c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/><path d="M5 12v7c0 1.7 3.1 3 7 3s7-1.3 7-3v-7"/></svg></span>
+                <span>Enterprise knowledge remains protected within MRANTI’s authorised environment.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="login-capability-band" aria-label="MRANTI Workspace capabilities">
+        <article class="login-capability-card">
+          <div class="login-capability-number" aria-hidden="true">01</div>
+          <div class="login-capability-title">Search</div>
+          <div class="login-capability-copy">Find documents, emails, meetings and business knowledge instantly.</div>
+        </article>
+        <article class="login-capability-card">
+          <div class="login-capability-number" aria-hidden="true">02</div>
+          <div class="login-capability-title">Understand</div>
+          <div class="login-capability-copy">Turn connected information into summaries, context and actionable insights.</div>
+        </article>
+        <article class="login-capability-card">
+          <div class="login-capability-number" aria-hidden="true">03</div>
+          <div class="login-capability-title">Act</div>
+          <div class="login-capability-copy">Prepare briefs, draft follow-ups and move work forward with confidence.</div>
+        </article>
+        <div class="login-footer">© 2026 MRANTI. All rights reserved.</div>
+      </section>
+    </main>
+  </div>
+
+  <div id="app-screen" class="app-screen">
+    <div class="workspace-app">
+      <header class="system-sidebar modern-navbar" id="system-navbar" aria-label="MRANTI Workspace header">
+        <div class="modern-navbar-inner">
+          <button id="mobile-nav-button" class="system-mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false">
+            <span id="mobile-menu-icon"></span>
+          </button>
+
+          <button id="brand-home-button" class="system-brand modern-brand" type="button" aria-label="MRANTI Workspace home">
+            <img class="system-brand-logo" src="https://cdn.prod.website-files.com/6719e3902a71ea8154ba371d/6996a2c470a01e3f32ffa080_M30.png" alt="MRANTI 30 Years" />
+            <span class="modern-brand-divider" aria-hidden="true"></span>
+            <img class="system-app-logo" src="mranti-workspace-mark.png" alt="" aria-hidden="true" />
+          </button>
+
+          <div class="modern-navbar-space" aria-hidden="true"></div>
+
+          <div class="modern-navbar-actions">
+            <button id="new-conversation-top" class="modern-log-button" type="button">
+              <span id="top-plus-icon"></span><span>New Query</span>
+            </button>
+            <button id="profile-button" class="system-user-button modern-user-button" type="button" aria-label="Open account menu" aria-expanded="false">
+              <img id="profile-photo" class="profile-photo user-avatar hidden" alt="" />
+              <span id="profile-initial" class="user-avatar-placeholder">M</span>
+              <span class="modern-user-copy"><span id="top-user-name">MRANTI User</span><small id="top-user-email">Authorised account</small></span>
+              <span id="profile-chevron" class="modern-user-chevron" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <div id="profile-menu" class="system-user-menu hidden" role="menu">
+          <div class="system-user-menu-head"><strong id="menu-user-name">MRANTI User</strong><small id="menu-user-email">Authorised account</small></div>
+          <button class="system-user-menu-item" type="button" role="menuitem" data-route="conversations">Conversation history</button>
+          <button id="sign-out-button" class="system-user-menu-item danger" type="button" role="menuitem">Sign out</button>
+        </div>
+      </header>
+
+      <button id="topnav-overlay" class="system-navbar-overlay" type="button" aria-label="Close navigation"></button>
+
+      <div id="workspace-layout" class="workspace-layout">
+        <aside class="brainte-rail" aria-label="BrainT navigation">
+          <nav class="rail-nav" aria-label="Workspace sections">
+            <button class="rail-link active" type="button" data-route="home" aria-label="Home">
+              <span class="rail-icon" data-icon="home"></span><span class="rail-label">Home</span>
+            </button>
+            <button class="rail-link" type="button" data-route="conversations" aria-label="Chats">
+              <span class="rail-icon" data-icon="chat"></span><span class="rail-label">Chats</span><span id="conversation-count" class="rail-count">0</span>
+            </button>
+          </nav>
+          <div class="rail-spacer"></div>
+          <div class="rail-connection" id="workspace-connection" title="Authorised Google Workspace connection">
+            <span class="connection-dot" aria-hidden="true"></span>
+            <span class="rail-label">Secure</span>
+          </div>
+        </aside>
+
+        <button id="sidebar-overlay" class="sidebar-overlay" type="button" aria-label="Close navigation"></button>
+
+        <main id="workspace-main" class="workspace-main" tabindex="-1">
+          <div id="view-root" class="view-root" aria-live="polite"></div>
+        </main>
+
+        <div class="utility-hidden" aria-hidden="true">
+          <button id="new-conversation-button" type="button"><span id="plus-icon"></span></button>
+          <button id="sidebar-collapse" type="button"></button>
+          <div id="recent-conversations"></div>
+          <div id="google-status"><strong></strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+  <script src="config.js?v=11"></script>
+  <script type="module" src="app.js?v=20"></script>
+</body>
+</html>
